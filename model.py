@@ -118,7 +118,7 @@ class TritonPythonModel:
             # Create generation configuration
             gen_config = GenerationConfig(
                 max_new_tokens=max_tokens,
-                ignore_eos=ignore_eos,
+                ignore_eos=ignore_eos, min_new_tokens=196,
                 logprobs=1,  do_sample=True,random_seed=random_seed,# Ensure logprobs are generated
                 **optional_configs
             )
